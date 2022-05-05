@@ -28,22 +28,6 @@ module setup_clis {
   }
 } 
 
-/*resource null_resource setup_gitops {
-  depends_on = [null_resource.create_yaml]
-
-  triggers = {
-    name = local.name
-    namespace = var.namespace
-    yaml_dir = local.yaml_dir
-    server_name = var.server_name
-    layer = local.layer
-    type = local.type
-    git_credentials = yamlencode(var.git_credentials)
-    gitops_config   = yamlencode(var.gitops_config)
-    bin_dir = local.bin_dir
-  }
-} */
-
 # Deploy
 resource gitops_module deploy_sbo {
   depends_on = [null_resource.create_yaml]
