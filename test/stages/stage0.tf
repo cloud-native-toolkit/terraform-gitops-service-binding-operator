@@ -1,4 +1,9 @@
 terraform {
+  required_providers {
+    gitops = {
+      source  = "cloud-native-toolkit/gitops"
+    }
+  }
 }
 
 module setup_clis {
@@ -13,3 +18,4 @@ resource local_file bin_dir {
 
   content = module.setup_clis.bin_dir
 }
+
