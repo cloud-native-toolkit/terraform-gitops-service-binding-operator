@@ -1,5 +1,4 @@
 #  RedHat Service Binding Operator - Gitops terraform module
-![Verify and release module](https://github.com/cloud-native-toolkit/terraform-gitops-service-binding-operator/workflows/Verify%20and%20release%20module/badge.svg)
 
 Deploys the latest stable version of the RedHat OpenShift Service Binding Operator via helm chart.  By default, the SBO will be installed into `openshift-operators` namespace.  If this needs to be installed where a namespace does not yet exist, you can utilize the `Namespace` module or if the namespace exists, then spcify the namespace in the module declaration.
 
