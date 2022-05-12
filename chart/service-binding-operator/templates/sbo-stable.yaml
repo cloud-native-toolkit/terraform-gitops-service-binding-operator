@@ -5,6 +5,8 @@ metadata:
   labels:
     operators.coreos.com/rh-service-binding-operator.openshift-operators: ''
     {{- include "service-binding-operator.labels" . | nindent 4 }}
+  annotations:
+    argocd.argoproj.io/sync-wave: "-1"   
 spec:
   channel: stable
   installPlanApproval: Automatic
